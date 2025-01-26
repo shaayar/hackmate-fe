@@ -20,26 +20,29 @@ export default function Signup() {
   const showSuccessToast = () => {
     toast({
       variant: "success",
-      title: (
+      title: "Account Created",
+      description: (
         <div className="flex items-center">
-          <Check className="mr-2 h-4 w-4" /> Account Created
+          <Check className="mr-2 h-4 w-4" />
+          Your account has been successfully created!
         </div>
       ),
-      description: "Your account has been successfully created!",
-    })
-  }
-
+    });
+  };
+  
   const showErrorToast = (message: string) => {
     toast({
       variant: "destructive",
-      title: (
+      title: "Sign Up Failed",
+      description: (
         <div className="flex items-center">
-          <AlertCircle className="mr-2 h-4 w-4" /> Sign Up Failed
+          <AlertCircle className="mr-2 h-4 w-4" />
+          {message}
         </div>
       ),
-      description: message,
-    })
-  }
+    });
+  };
+  
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
