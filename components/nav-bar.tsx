@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useAuth } from "@/providers/auth-provider";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/toast-context";
 
 export function NavBar() {
   const { user, signOut } = useAuth();
